@@ -4,7 +4,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :remember_digest
       t.string :picture
-      t.datetime :birthday
       t.integer :gender
       t.string :country
       t.string :state
