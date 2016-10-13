@@ -101,7 +101,6 @@ ActiveRecord::Schema.define(version: 20161013155727) do
     t.string   "name"
     t.string   "remember_digest"
     t.string   "picture"
-    t.datetime "birthday"
     t.integer  "gender"
     t.string   "country"
     t.string   "state"
