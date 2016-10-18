@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20161013155727) do
     t.string   "country"
     t.string   "state"
     t.string   "phone"
+    t.datetime "birthday"
     t.boolean  "admin",                  default: false
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false

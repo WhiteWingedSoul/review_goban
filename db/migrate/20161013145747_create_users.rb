@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :country
       t.string :state
       t.string :phone
+      t.datetime :birthday
       t.boolean :admin, default: false
 
       t.timestamps null: false
