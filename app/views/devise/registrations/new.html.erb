@@ -15,25 +15,27 @@
       <%= f.email_field :email, autofocus: true, class: "form-control"  %>
 
       <%= f.label :password %>
-      <%= t("devise.minimum_password_length",
-        length: @minimum_password_length) if @minimum_password_length %>
-      <%= f.password_field :password, autocomplete: "off",
-        class: "form-control" %>
+      <%= t"devise.minimum_password_length" %>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
 
       <%= f.label :password_confirmation %><br/>
       <%= f.password_field :password_confirmation, autocomplete: "off",
         class: "form-control" %>
-      
+
       <%= f.label :country %><br/>
       <%= f.text_field :country, class: "form-control" %>
-      
+
       <%= f.label :state %><br/>
       <%= f.text_field :state, class: "form-control" %>
-      
+
       <%= f.label :phone %><br/>
       <%= f.text_field :phone, class: "form-control" %>
-              
+
+      <%= f.label :birthday %><br/>
+      <%= f.date_field :birthday, class: "form-control" %>
+
       <span class="picture">
+        <%= f.label :picture, "Your image" %><br/>
         <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png" %>
       </span>
       <div class="actions">
