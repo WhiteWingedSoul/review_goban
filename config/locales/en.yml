@@ -26,6 +26,10 @@ en:
     edit_category_successful: "edit category successful"
     delete_category_successful: "delete category successful"
     delete_category_unsuccessful: "delete category successful"
+    new_product_successful: "add product successful"
+    edit_product_successful: "edit product successful"
+    delete_product_successful: "delete product successful"
+    delete_product_unsuccessful: "delete product successful"
   error:
     form: "Form: "
     error: "errors"
@@ -34,3 +38,9 @@ en:
     delete: "Delete"
     confirm: "Are you sure?"
     show: "Show"
+  product:
+    edit: "Edit"
+    delete: "Delete"
+    confirm: "Are you sure?"
+    show: "Show"
+    image: "Image"

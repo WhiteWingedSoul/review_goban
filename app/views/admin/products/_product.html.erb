@@ -1,0 +1,18 @@
+<tr>
+  <td class="center"><%= image_tag product.image, height: "40", width: "40" %></td>
+  <td class="center"><%= product.category.name %></td>
+  <td class="center"><%= product.name %></td>
+  <td>
+    <%= link_to t("product.show"), "",
+      class: "btn btn-info icon-trash icon-white" %>
+  </td>
+  <td>
+    <%= link_to t("product.edit"), "",
+      class: "btn btn-info icon-trash icon-white" %>
+  </td>
+  <td>
+    <%= link_to t("product.delete"), "",
+      method: :delete, data: {confirm: t("category.confirm")},
+      class: "btn btn-danger icon-trash icon-white" %>
+  </td>
+</tr>
