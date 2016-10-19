@@ -20,3 +20,17 @@ en:
     edit_profile: "Edit profile"
     update_profile: "Update profile"
     sign_up: "Sign Up"
+  not_authorized: "You are not authorized to access this page"
+  message:
+    new_category_successful: "add category successful"
+    edit_category_successful: "edit category successful"
+    delete_category_successful: "delete category successful"
+    delete_category_unsuccessful: "delete category successful"
+  error:
+    form: "Form: "
+    error: "errors"
+  category:
+    edit: "Edit"
+    delete: "Delete"
+    confirm: "Are you sure?"
+    show: "Show"

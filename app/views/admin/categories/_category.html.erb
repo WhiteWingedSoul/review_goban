@@ -1,0 +1,16 @@
+<tr>
+  <td class="center"><%= category.name %></td>
+  <td>
+    <%= link_to t("category.show"), admin_category_path(category),
+      class: "btn btn-info icon-trash icon-white" %>
+  </td>
+  <td>
+    <%= link_to t("category.edit"), edit_admin_category_path(category),
+      class: "btn btn-info icon-trash icon-white" %>
+  </td>
+  <td>
+    <%= link_to t("category.delete"), admin_category_path(category),
+      method: :delete, data: {confirm: t("category.confirm")},
+      class: "btn btn-danger icon-trash icon-white" %>
+  </td>
+</tr>
