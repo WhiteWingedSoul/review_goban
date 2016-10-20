@@ -15,9 +15,12 @@ class Admin::ProductsController < ApplicationController
   def create
     @product = Product.new product_params
     @product.user = current_user
+    # byebug
     if @product.save
-      params[:product_images][:image].each do |a|
-        @product_image = @product.product_images.create!(image: a)
+      unless params[:product_images].nil?
+        params[:product_images][:image].each do |a|
+          @product_image = @product.product_images.create!(image: a)
+        end
       end
       flash[:success] = t "message.new_product_successful"
       redirect_to admin_products_path
@@ -25,6 +28,19 @@ class Admin::ProductsController < ApplicationController
       render "new"
     end
   end
+  
+  def edit
+  end
+
+  def update
+    if @product.update_attributes product_params
+      flash[:success] = t "message.edit_product_successful"
+      redirect_to admin_products_path
+    else
+      render "edit"
+    end
+  end
+
   
   def destroy
     if @product.destroy
@@ -39,7 +55,6 @@ class Admin::ProductsController < ApplicationController
   private
   def product_params
     params.require(:product).permit :name, :category_id, :description, :detail, :price,
-      :promotion, :is_display, :image,
-      product_images_attributes: [:id, :product_id, :image]
+      :promotion, :is_display, :image, pictures: []
   end
 end
