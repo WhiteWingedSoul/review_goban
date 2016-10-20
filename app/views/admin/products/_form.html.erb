@@ -18,12 +18,10 @@
       <%= f.label :image, "Products image" %><br/>
       <%= f.file_field :image, accept: "image/jpeg, image/jpg, image/gif, image/png" %>
 
-      <%= f.fields_for :product_images do |p| %>
-        <div class="field">
-          <%= p.label :image %><br>
-          <%= p.file_field :image, :multiple => true, name: "product_images[image][]" %>
-        </div>
-      <% end %>
+      <div class="field">
+        <%= f.label :pictures %><br>
+        <%= f.file_field :pictures, :multiple => true, name: "product_images[image][]" %>
+      </div>
 
       <%= f.label :price %><br/>
       <%= f.number_field :price, class: "form-control", min: 1000, step: 1000 %>
