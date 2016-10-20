@@ -1,0 +1,62 @@
+<% provide :title, @product.name %>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default text-center">
+      <h3>Name: <%= @product.name %></h3><hr>
+      <ul class="list-unstyled">
+        <%= image_tag @product.image , height: "100", width: "100" %>
+        <%= @product.description %><hr>
+      </ul>
+    </div>
+    
+    <div class="panel panel-default text-center">
+        <% if @product.product_images.any? %>
+            <% @product.product_images.each do |image| %>
+                <%= image_tag image.image, height: "50", width: "50" %>
+            <% end %>
+        <% end %>
+
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="panel panel-default text-center">
+      <h3><%= t :infomation %></h3><hr>
+      <ul class="list-unstyled">
+        <div class="center">
+          <li>
+            <% t :description %>
+            <%= @product.description %>
+          </li>
+          </div>
+      </ul>
+      <hr>
+      <ul class="list-unstyled">
+        <div class="center">
+          <li>
+            <%= t :detail %>
+            <%= @product.detail %>
+          </li>
+        </div>
+      </ul>
+      <hr>
+      <ul class="list-unstyled">
+        <div class="center">
+          <li>
+            <%= t :price %>
+            <%= @product.price %>
+          </li>
+        </div>
+      </ul>
+      <hr>
+      <ul class="list-unstyled">
+        <div class="center">
+          <li>
+            <%= t :promotion %>
+            <%= @product.promotion %>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
