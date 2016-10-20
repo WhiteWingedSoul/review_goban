@@ -11,7 +11,7 @@
       class: "btn btn-info icon-trash icon-white" %>
   </td>
   <td>
-    <%= link_to t("product.delete"), "",
+    <%= link_to t("product.delete"), admin_product_path(product),
       method: :delete, data: {confirm: t("category.confirm")},
       class: "btn btn-danger icon-trash icon-white" %>
   </td>

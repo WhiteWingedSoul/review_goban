@@ -25,6 +25,16 @@ class Admin::ProductsController < ApplicationController
       render "new"
     end
   end
+  
+  def destroy
+    if @product.destroy
+      flash[:success] = t "message.delete_product_successful"
+      redirect_to admin_products_path
+    else
+      flash[:success] = t "message.delete_product_unsuccessful"
+      redirect_to admin_products_path
+    end
+  end
 
   private
   def product_params
