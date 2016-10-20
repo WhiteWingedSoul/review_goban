@@ -2,8 +2,11 @@
   <td class="center"><%= image_tag product.image, height: "40", width: "40" %></td>
   <td class="center"><%= product.category.name %></td>
   <td class="center"><%= product.name %></td>
+  <td class="center">
+    <%= product.is_display? ? "Yes" : "No" %>
+  </td>
   <td>
-    <%= link_to t("product.show"), "",
+    <%= link_to t("product.show"), admin_product_path(product),
       class: "btn btn-info icon-trash icon-white" %>
   </td>
   <td>
