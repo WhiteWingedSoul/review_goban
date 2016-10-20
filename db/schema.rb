@@ -78,8 +78,22 @@ ActiveRecord::Schema.define(version: 20161019163212) do
 
   add_index "product_images", ["product_id"], name: "index_product_images_on_product_id"
 
-# Could not dump table "products" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "products", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "category_id"
+    t.string   "name"
+    t.string   "description"
+    t.string   "detail"
+    t.string   "image"
+    t.decimal  "price"
+    t.integer  "promotion"
+    t.boolean  "is_display"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "products", ["category_id"], name: "index_products_on_category_id"
+  add_index "products", ["user_id"], name: "index_products_on_user_id"
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "user_id"
