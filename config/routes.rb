@@ -10,5 +10,7 @@ Rails.application.routes.draw do
     resources :products
     resources :main, only: :index
   end
-  resources :products
+  resources :products do
+    resources :comments, only: [:create, :new, :destroy]
+  end
 end
