@@ -8,4 +8,6 @@ class Product < ActiveRecord::Base
   validates :description, presence: true, length: {maximum: 200}
   validates :detail, presence: true
   validates :price, presence: true
+
+  scope :concern_products, -> product{where.not id: product.id }
 end
