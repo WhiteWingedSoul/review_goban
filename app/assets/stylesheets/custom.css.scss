@@ -245,3 +245,20 @@ input {
     color: red;
   }
 }
+
+.rcorners {
+    border-radius: 15px 50px 30px 5px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    with: 100%;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  line-height: 1;
+  text-align: center;
+  margin: auto;
+}

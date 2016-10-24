@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :products
     resources :main, only: :index
   end
+  resources :products
 end
