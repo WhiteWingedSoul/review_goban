@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   validates :phone, length: {minimum: 10, maximum: 11}
 
   has_many :product, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   private
   def picture_size

@@ -45,11 +45,14 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+.navbar-default{
+  background: #289dcc;
+}
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -57,9 +60,31 @@ p {
 }
 
 #logo:hover {
-  color: #fff;
   text-decoration: none;
 }
+
+/* narbar*/
+.navbar {
+      margin-bottom: 0;
+      z-index: 9999;
+      border: 0;
+      border-radius: 0;
+
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color:  #289dcc !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  .dropdown-menu{
+  background-color: #289dcc !important;
+  }
 /* footer */
 
 footer {
@@ -90,37 +115,14 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
-
-/* narbar*/
-.navbar {
-  margin-bottom: 0;
-  z-index: 9999;
-  border: 0;
-  border-radius: 0;
-}
-.navbar li a, .navbar .navbar-brand {
-  color: #fff !important;
-}
-.navbar-nav li a:hover, .navbar-nav li.active a {
-  color:  #289dcc !important;
-  background-color: #fff !important;
-}
-.navbar-default .navbar-toggle {
-  border-color: transparent;
-  color: #fff !important;
-}
-.dropdown-menu{
-  background-color: #289dcc !important;
-}
-
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
-  -moz-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  box-sizing:         border-box;
 }
 
 /* miscellaneous */
@@ -171,7 +173,6 @@ aside {
 .gravatar_edit {
   margin-top: 15px;
 }
-
 .stats {
   overflow: auto;
   margin-top: 0;
@@ -179,7 +180,7 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid;
+    border-left: 1px solid $gray-lighter;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -209,15 +210,6 @@ aside {
   padding: 0;
 }
 
-/* miscellaneous */
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -242,9 +234,93 @@ input {
 .field_with_errors {
   @extend .has-error;
   .form-control {
-    color: red;
+    color: $state-danger-text;
   }
 }
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }}
+
+
+/* microposts */
+
+.products{
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px;
+    border-top: 1px solid #e8e8e8;
+    margin: 10px;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .title {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+/* Gradient color1 - color2 - color1 */
+
+hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
 
 .rcorners {
     border-radius: 15px 50px 30px 5px;
@@ -256,9 +332,9 @@ input {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  max-width: 100%;
   height: auto;
   line-height: 1;
   text-align: center;
   margin: auto;
+  height: 200;
 }

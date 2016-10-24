@@ -11,6 +11,7 @@ class Ability
       if namespace == "admin"
         cannot :manage, :all
       else
+        can :manage, Comment
         can :read, :all
       end
     end
