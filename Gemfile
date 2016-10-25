@@ -14,6 +14,7 @@ gem "carrierwave" , "0.10.0"
 gem "cancancan"
 gem "kaminari"
 gem "kaminari-bootstrap", "~> 3.0.1"
+gem "ratyrate"
 
 group :development, :test do
   gem "byebug"

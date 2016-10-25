@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  ratyrate_rateable "price"
   belongs_to :category
   belongs_to :user
   has_many :product_images, dependent: :destroy

@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   attr_accessor :remember_token
 
+  ratyrate_rater
+
   before_save {self.email = email.downcase}
 
   mount_uploader :picture, PictureUploader
