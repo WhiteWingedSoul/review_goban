@@ -13,4 +13,5 @@ class Product < ActiveRecord::Base
 
   scope :concern_products, -> product{where.not id: product.id}
   scope :display, ->{where is_display: true}
+  scope :sorted_by_price_rating, ->{joins(:price_average).order('rating_caches.avg DESC')}
 end
