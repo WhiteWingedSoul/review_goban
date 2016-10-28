@@ -41,8 +41,8 @@
       <p>Name: <%= @product.name %></p>
       <p>Price: <%= @product.price %></p>
       <%= rating_for @product, "price", star: 5, disable_after_rate: false %>
-      <%= @product.average("price").avg %>
-      <%= @product.rates("price").count %>
+      <%= @product.average("price").nil? ? "0" : @product.average("price").avg %>
+      <p><%= @product.rates("price").count %></p>
       <p>Description: <%= @product.description%></p>
     </div>
   </div>
@@ -58,8 +58,11 @@
 <br>
 <div class="container">
   <div>San pham lien quan</div>
-  <div class="row" style="height: 200px; overflow-y: scroll;">
-    <%= render @product.category.products.concern_products(@product) %>
+  <div class="row" style="height: 100px; overflow-y: scroll;">
+    <% @product.category.products.concern_products(@product).
+      order("RANDOM()").take(8).each do |product| %>
+      <%= render "shared/concern_product", product: product %>
+    <% end %>
   </div>
 </div>
 <br>
