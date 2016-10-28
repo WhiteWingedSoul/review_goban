@@ -1,0 +1,13 @@
+<div class="col-sm-3">
+  <div class="well well-sm">
+    <div style="display: inline-block">
+      <%= image_tag product.image, height: "50" %>
+    </div>
+    <div style="display: inline-block">
+      <span><%= link_to product.name, product_path(product) %></span>
+      <br>
+      <span class="content">Price: <%= product.price %></span>
+    </div>
+  </div>
+</div>
+
