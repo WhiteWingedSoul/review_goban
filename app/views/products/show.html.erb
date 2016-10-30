@@ -38,6 +38,7 @@
 
   <div class="col-sm-4">
     <div class="well">
+      <p>Category: <%= @product.category.name %></p>
       <p>Name: <%= @product.name %></p>
       <p>Price: <%= @product.price %></p>
       <%= rating_for @product, "price", star: 5, disable_after_rate: false %>

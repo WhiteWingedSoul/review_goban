@@ -2,6 +2,7 @@
   <div class="well well-sm">
     <%= image_tag product.image %>
     <p><%= link_to product.name, product_path(product) %></p>
+    <%= rating_for product, "price", star: 5, disable_after_rate: false %>
     <p><%= product.price %></p>
   </div>
 </div>
