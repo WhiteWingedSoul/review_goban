@@ -15,6 +15,7 @@ en:
   user:
     name_class: "user"
     edit: "Edit"
+    new: "New"
     log_out: "Log out"
     login: "Log in"
     edit_profile: "Edit profile"
@@ -30,6 +31,10 @@ en:
     edit_product_successful: "edit product successful"
     delete_product_successful: "delete product successful"
     delete_product_unsuccessful: "delete product successful"
+    new_user_successful: "add user successful"
+    edit_user_successful: "edit user successful"
+    delete_user_successful: "delete user successful"
+    delete_user_unsuccessful: "delete user successful"
   error:
     form: "Form: "
     error: "errors"
@@ -45,3 +50,15 @@ en:
     show: "Show"
     image: "Image"
     display: "Display"
+  user:
+    edit: "Edit"
+    new: "New"
+    delete: "Delete"
+    confirm: "Are you sure?"
+    show: "Show"
+    submit: "Submit"
+    all_users: "All users"
+  search:
+    user:
+      name: "Name"
+      email: "Email"
