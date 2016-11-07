@@ -1,6 +1,6 @@
 <div class="col-sm-4">
   <div class="well well-sm">
-    <%= image_tag product.image %>
+    <%= image_tag product.image, height:"50" %>
     <p><%= link_to product.name, product_path(product) %></p>
     <%= rating_for product, "price", star: 5, disable_after_rate: false %>
     <p><%= product.price %></p>

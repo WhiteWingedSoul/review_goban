@@ -1,11 +1,11 @@
 <div class="row">
 <div class="col-sm-2 rcorners">
-  <h2>All Category</h2>
+  <h2><%= link_to "All Category", categories_path %></h2>
   <div style="height: 100px; overflow-y: scroll;">
     <ul>
     <% unless @catgories.nil? %>
       <% @catgories.each do |category| %>
-        <li><%= link_to t(category.name), "" %></li>
+        <li><%= link_to t(category.name), category_path(category) %></li>
       <% end %>
     <% end %>
     </ul>
