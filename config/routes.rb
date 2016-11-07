@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     root "mains#index"
     resources :categories
     resources :products
+    resources :users
     resources :main, only: :index
   end
   resources :products do
