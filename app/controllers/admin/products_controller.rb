@@ -1,8 +1,12 @@
 class Admin::ProductsController < ApplicationController
   load_and_authorize_resource
   def index
-    @products = Product.all.page(params[:page]).
-      per 10
+    @search = @products.ransack params[:q]
+    if params[:q].nil?
+      @products = @products.page(params[:page]).per 10
+    else
+      @products = @search.result.page(params[:page]).per 10
+    end
   end
 
   def show

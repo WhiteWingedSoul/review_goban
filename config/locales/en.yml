@@ -50,6 +50,7 @@ en:
     show: "Show"
     image: "Image"
     display: "Display"
+    all: "All products"
   user:
     edit: "Edit"
     new: "New"
@@ -62,3 +63,11 @@ en:
     user:
       name: "Name"
       email: "Email"
+    product:
+      name: "Name"
+      category_name: "Category"
+      not_display: "Not Display"
+      from_price: "Form Price"
+      to_price: "To Price"
+      from_promotion: "Form Promotion"
+      to_promotion: "To Promotion"
